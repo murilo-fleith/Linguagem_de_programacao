@@ -1,0 +1,12 @@
+{
+  "name": "Linguagem_de_programacao",
+  "displayName": "Linguagem_de_programacao",
+  "expo": {
+    "name": "Linguagem_de_programacao",
+    "slug": "Linguagem_de_programacao",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
