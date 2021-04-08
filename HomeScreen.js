@@ -8,7 +8,7 @@ class HomeScreen extends React.Component {
       <View style={styles.container}>
         <TouchableOpacity style={styles.cadastar}>
         <Button 
-        title = "Cadastrar"
+        title = "Cadastrar !"
         onPress={() => this.props.navigation.navigate('Cadastro')}
         />
         </TouchableOpacity>
