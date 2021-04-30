@@ -45,6 +45,7 @@ class HomeScreen extends React.Component {
         color= "#2935B9" 
         title = "Pesquisar"
         onPress={() => this.props.navigation.navigate('Pesquisar')}
+
         />
         </TouchableOpacity>
       </View>
