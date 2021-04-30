@@ -7,6 +7,7 @@ import HomeScreen from './HomeScreen'
 import CadastroScreen from './CadastroScreen'
 import DeletScreen from './DeletScreen';
 import AlterarScreen from './AlterarScreen';
+import PesquisaScreen from './PesquisaScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,10 @@ class App extends React.Component {
               name="Alterar"  
               component={AlterarScreen} 
             />
+            <Stack.Screen
+              name="Pesquisa"
+              component={PesquisaScreen}
+              />
           </Stack.Navigator>
       </NavigationContainer>
     );
@@ -56,4 +61,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
