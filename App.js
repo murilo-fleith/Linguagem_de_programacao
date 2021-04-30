@@ -7,7 +7,7 @@ import HomeScreen from './HomeScreen'
 import CadastroScreen from './CadastroScreen'
 import DeletScreen from './DeletScreen';
 import AlterarScreen from './AlterarScreen';
-import PesquisaScreen from './PesquisaScreen'
+import PesquisaScreen from './PesquisaScreen';
 
 
 

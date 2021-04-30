@@ -45,7 +45,7 @@ class HomeScreen extends React.Component {
         alignItems= 'center'
         color= "#2935B9" 
         title = "Pesquisar"
-        onPress={() => this.props.navigation.navigate('Pesquisar')}
+        onPress={() => this.props.navigation.navigate('Pesquisa')}
 
         />
         </TouchableOpacity>
