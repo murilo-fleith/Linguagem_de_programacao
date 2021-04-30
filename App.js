@@ -7,6 +7,7 @@ import HomeScreen from './HomeScreen'
 import CadastroScreen from './CadastroScreen'
 import DeletScreen from './DeletScreen';
 import AlterarScreen from './AlterarScreen';
+import PesquisaScreen from './PesquisaScreen'
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,10 @@ class App extends React.Component {
             <Stack.Screen 
               name="Alterar"  
               component={AlterarScreen} 
+            />
+            <Stack.Screen 
+              name="Pesquisar"  
+              component={PesquisaScreen} 
             />
           </Stack.Navigator>
       </NavigationContainer>
