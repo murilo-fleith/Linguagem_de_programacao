@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, HeaderBackground, HeaderTitle } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen'
 import CadastroScreen from './CadastroScreen'
 import DeletScreen from './DeletScreen';
@@ -26,21 +26,42 @@ class App extends React.Component {
               component={HomeScreen}
             />
             <Stack.Screen
-              //options={{
+            options={{
               //headerShown: false
-              //}}
+                headerTitleAlign: 'center',
+                headerTintColor: '#fff',
+                headerStyle: { backgroundColor:'#000000'}
+              }}
               name="Cadastro"
               component={CadastroScreen}
             />
             <Stack.Screen
+            options={{
+              //headerShown: false
+                headerTitleAlign: 'center',
+                headerTintColor: '#fff',
+                headerStyle: { backgroundColor:'#000000'}
+              }}            
               name="Delete"
               component={DeletScreen}
             />
             <Stack.Screen 
-              name="Alterar"  
+            options={{
+              //headerShown: false
+                headerTitleAlign: 'center',
+                headerTintColor: '#fff',
+                headerStyle: { backgroundColor:'#000000'}
+              }}             
+             name="Alterar"  
               component={AlterarScreen} 
             />
             <Stack.Screen
+            options={{
+              //headerShown: false
+                headerTitleAlign: 'center',
+                headerTintColor: '#fff',
+                headerStyle: { backgroundColor:'#000000'}
+              }}
               name="Pesquisa"
               component={PesquisaScreen}
               />
