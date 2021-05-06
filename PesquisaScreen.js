@@ -5,7 +5,7 @@ class CadastroScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Pesquisa Screen </Text>
+        <Text> fire base </Text>
         
       </View>
     );
@@ -13,8 +13,7 @@ class CadastroScreen extends React.Component {
 }
 
 
-// ...
-//home
+
 export default CadastroScreen;
 
 const styles = StyleSheet.create({

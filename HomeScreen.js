@@ -74,9 +74,9 @@ const styles = StyleSheet.create({
     margin: 15,
     padding: 1,
     color: "#000000",
-    borderRadius: 20,
+    //borderRadius: 20,
     justifyContent: 'center',
-    alignItems: 'center' 
+    //alignItems: 'center' 
   },
 
   alterar:{
@@ -85,9 +85,9 @@ const styles = StyleSheet.create({
     marginTop: 90,
     padding: 1,
     color: "#000000",
-    borderRadius: 20,
+    //borderRadius: 20,
     justifyContent: 'center',
-    alignItems: 'center'
+    //alignItems: 'center'
        
   },
   deletar:{
@@ -95,17 +95,17 @@ const styles = StyleSheet.create({
     margin: 15,
     padding: 1,
     color : "#000000",
-    borderRadius: 20,
+    //borderRadius: 20,
     justifyContent: 'center',
-    alignItems: 'center'
+    //alignItems: 'center'
   },
   pesquisar:{
     backgroundColor: "#2935B9",
     margin: 15,
     padding: 1,
     color : "#000000",
-    borderRadius: 20,
+    //borderRadius: 20,
     justifyContent: 'center',
-    alignItems: 'center'
+    //alignItems: 'center'
   }
 });

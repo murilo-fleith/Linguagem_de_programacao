@@ -18,11 +18,17 @@ class App extends React.Component {
     return(
       <NavigationContainer >
           <Stack.Navigator >
-            <Stack.Screen 
+            <Stack.Screen
+            options={{
+            headerShown: false
+            }}
               name="Inicio"
               component={HomeScreen}
             />
             <Stack.Screen
+              //options={{
+              //headerShown: false
+              //}}
               name="Cadastro"
               component={CadastroScreen}
             />
