@@ -23,7 +23,7 @@ class HomeScreen extends React.Component {
         justifyContent= 'center'
         alignItems = 'center'
         color= "#00FF00"
-        borderRadius= '2' 
+        borderRadius= '20' 
         title = "Cadastrar"
         onPress={() => this.props.navigation.navigate('Cadastro')}
         />
@@ -54,8 +54,7 @@ class HomeScreen extends React.Component {
   }
 }
 
-// ...
-// Friend
+
 export default HomeScreen;
 
 const styles = StyleSheet.create({

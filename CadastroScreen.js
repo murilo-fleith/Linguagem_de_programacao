@@ -6,35 +6,37 @@ import { color } from 'react-native-reanimated';
 import firebase from "./firebase"
 
 export default function CadastroScreen(){
-  const [name , setName] = useState('');
-  const [idade , setIdade] = useState('');
-
+  const [produto, setProduto] = useState('');
+  const [quantidade , setQuantidade] = useState('');
+  
   function pushFirebase(){
     try{
       firebase.database().ref('/crud').push({
-        name: name,
-        idade : idade
+        produto: produto,
+        quantidade : quantidade,
+        
       })
     } catch (error){
       alert(error)
     }
     finally{
-      setName('');
-      setIdade('');
+      setProduto('');
+      setQuantidade('');
       alert('Cadastro Realizado Com Sucesso');
     }
   }
   return (
      <View style={styles.container}>
         <TextInput  style={styles.textInput} 
-        onChangeText= {name => setName(name)} value={name}
-        placeholder = "Seu Nome:"/>
+        onChangeText= {produto => setProduto(produto)} value={produto}
+        placeholder = "Produto:"/>
         
         <TextInput style={styles.textInput}
-          onChangeText= {idade => setIdade(idade)} value={idade}
-          placeholder = "Sua Idade"/>
-       
-       <TouchableOpacity style={styles.btnEnviar} onPress
+          onChangeText= {quantidade => setQuantidade(quantidade)} value={quantidade}
+          placeholder = "Quantidade"/>
+
+
+      <TouchableOpacity style={styles.btnEnviar} onPress
        ={pushFirebase}>
          <Text style={styles.text}>
           Cadastrar
@@ -66,8 +68,8 @@ const styles = StyleSheet.create({
   },
   btnEnviar:{
     margin: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
+    borderWidth: 3,
+    borderColor: '#00FF00',
     width:150,
     height: 50,
     alignItems: 'center',

@@ -37,9 +37,8 @@ class App extends React.Component {
             />
             <Stack.Screen
             options={{
-              //headerShown: false
                 headerTitleAlign: 'center',
-                headerTintColor: '#fff',
+                headerTintColor: 'red',
                 headerStyle: { backgroundColor:'#000000'}
               }}            
               name="Delete"
