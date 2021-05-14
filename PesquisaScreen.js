@@ -28,23 +28,6 @@ export default function CadastroScreen(){
     }
   }, [])
   
-  function pushFirebase(){
-    try{
-      firebase.database().ref('/crud').push({
-        produto: produto,
-        quantidade : quantidade,
-        
-      })
-    } catch (error){
-      alert(error)
-    }
-    finally{
-      setProduto('');
-      setQuantidade('');
-      alert('Cadastro Realizado Com Sucesso');
-    }
-  } 
-  
 
   return (
     <View style={styles.container}>
