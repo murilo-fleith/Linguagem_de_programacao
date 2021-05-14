@@ -8,6 +8,7 @@ import CadastroScreen from './CadastroScreen'
 import DeletScreen from './DeletScreen';
 import AlterarScreen from './AlterarScreen';
 import PesquisaScreen from './PesquisaScreen';
+import Edit from './Edit';
 
 
 
@@ -63,6 +64,16 @@ class App extends React.Component {
               }}
               name="Pesquisa"
               component={PesquisaScreen}
+              />
+            <Stack.Screen
+            options={{
+              //headerShown: false
+                headerTitleAlign: 'center',
+                headerTintColor: '#fff',
+                headerStyle: { backgroundColor:'#000000'}
+              }}
+              name="Edit"
+              component={Edit}
               />
 
           </Stack.Navigator>
