@@ -11,9 +11,9 @@ export default function Update( {navigation}) {
    
   function upDateFire() {
     try {
-        firebase.database().ref('/crud'+navigation.getParam('key')).update({
-        produto: produto,
-        quantidade: quantidade
+        firebase.database().ref('/crud/'+navigation.getParam('key')).update({
+            produto: produto,
+            quantidade : quantidade,
       })
 
     } catch (error) {
@@ -22,8 +22,8 @@ export default function Update( {navigation}) {
     finally {
       setQuantidade('');
       setProdudo('');
-      //navigation.navigate("Index")
-      alert('Sucesso')
+      alert('Sucesso');
+      navigation.navigate("Home")
     }
   }
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, HeaderBackground, HeaderTitle } from '@react-navigation/stack';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import HomeScreen from './HomeScreen'
 import CadastroScreen from './CadastroScreen'
 import DeletScreen from './DeletScreen';
@@ -12,76 +13,22 @@ import Edit from './Edit';
 
 
 
-const Stack = createStackNavigator();
 
-class App extends React.Component {
-  render() {
-    return(
-      <NavigationContainer >
-          <Stack.Navigator >
-            <Stack.Screen
-            options={{
-            headerShown: false
-            }}
-              name="Inicio"
-              component={HomeScreen}
-            />
-            <Stack.Screen
-            options={{
-              //headerShown: false
-                headerTitleAlign: 'center',
-                headerTintColor: '#fff',
-                headerStyle: { backgroundColor:'#000000'}
-              }}
-              name="Cadastro"
-              component={CadastroScreen}
-            />
-            <Stack.Screen
-            options={{
-                headerTitleAlign: 'center',
-                headerTintColor: 'red',
-                headerStyle: { backgroundColor:'#000000'}
-              }}            
-              name="Delete"
-              component={DeletScreen}
-            />
-            <Stack.Screen 
-            options={{
-              //headerShown: false
-                headerTitleAlign: 'center',
-                headerTintColor: '#fff',
-                headerStyle: { backgroundColor:'#000000'}
-              }}             
-             name="Alterar"  
-              component={AlterarScreen} 
-            />
-            <Stack.Screen
-            options={{
-              //headerShown: false
-                headerTitleAlign: 'center',
-                headerTintColor: '#fff',
-                headerStyle: { backgroundColor:'#000000'}
-              }}
-              name="Pesquisa"
-              component={PesquisaScreen}
-              />
-            <Stack.Screen
-            options={{
-              //headerShown: false
-                headerTitleAlign: 'center',
-                headerTintColor: '#fff',
-                headerStyle: { backgroundColor:'#000000'}
-              }}
-              name="Edit"
-              component={Edit}
-              />
 
-          </Stack.Navigator>
-      </NavigationContainer>
-    );
-  }
+const AppNavigator = createSwitchNavigator({
+  Home: HomeScreen,
+  Alterar: AlterarScreen,
+  Pesquisa: PesquisaScreen,
+  Cadastro: CadastroScreen,
+  Delete: DeletScreen,
+  Edit: Edit
+},
+{
+  initialRouteName: 'Home',
 }
+)
 
+export default createAppContainer(AppNavigator);
 
 
 const styles = StyleSheet.create({
@@ -100,4 +47,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
