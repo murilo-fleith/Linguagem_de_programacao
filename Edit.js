@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { View, StyleSheet, Text, TouchableOpacity,TextInput } from 'react-native';
 import firebase from './firebase';
 
 
@@ -38,11 +37,11 @@ export default function Update( {navigation}) {
                 <TextInput style={styles.textInput} onChangeText={quantidade => setQuantidade(quantidade)} value={quantidade} />
 
                 <TouchableOpacity style={styles.btnEnviar} onPress={() => { upDateFire() }}>
-                    <Text style={styles.text}>Update</Text>
+                    <Text style={styles.textUpdate}>Update</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btnEnviar} onPress={() => navigation.navigate("Index")}>
-                    <Text style={styles.text}>Cancel</Text>
+                <TouchableOpacity style={styles.btnHome} onPress={() => navigation.navigate("Home")}>
+                    <Text style={styles.textHome}>Home</Text>
                 </TouchableOpacity>
 
             </View>
@@ -66,14 +65,20 @@ const styles = StyleSheet.create({
     text: {
         color: '#fff',
     },
+    textHome:{
+        color: '#0000FF'
+      },
+    textUpdate:{
+        color:"#FA5700",
+    },
     btnEnviar: {
-        borderWidth: 1,
-        borderColor: 'red',
-        width: 100,
-        height: 20,
+        margin: 10,
+        borderWidth: 3,
+        borderColor: "#FA5700",
+        width:150,
+        height: 50,
         alignItems: 'center',
-        justifyContent: 'center',
-        margin: 20
+        justifyContent: 'center'
     },
     textInput: {
         width: 300,
@@ -83,4 +88,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 5
     },
+    btnHome:{
+        margin: 10,
+        borderWidth: 3,
+        borderColor: '#0000FF',
+        width:150,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
 });

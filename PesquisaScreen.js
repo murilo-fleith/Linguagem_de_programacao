@@ -4,7 +4,7 @@ import { StyleSheet, Text, View,Button, TextInput,TextInputBase, TouchableOpacit
 import { color } from 'react-native-reanimated';
 import firebase from "./firebase"
 
-export default function CadastroScreen(){
+export default function CadastroScreen({ navigation }){
   const [produto, setProduto] = useState('');
   const [quantidade , setQuantidade] = useState('');
   const [listFire, setListFire] = useState('');
@@ -42,6 +42,9 @@ export default function CadastroScreen(){
 
         }
       />
+      <TouchableOpacity style={styles.btnHome} onPress={() => navigation.navigate("Home")}>
+        <Text style={styles.textHome}>Home</Text>
+      </TouchableOpacity>
      </View>
   );
 }
@@ -57,6 +60,9 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
   },
+  textHome:{
+    color: '#0000FF'
+  },
   textInput: {
     width: 300,
     height: 50,
@@ -65,20 +71,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 5
   },
-  btnEnviar: {
-    margin: 10,
-    borderWidth: 1,
-    borderColor: 'red',
-    width: 150,
-    height: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   iconFlat: {
     flexDirection: 'row',
     width: 350,
     height: 50,
-    borderColor: 'red',
+    borderColor: "#2935B9",
     borderWidth: 1,
     borderRadius: 5,
     alignItems: 'center',
@@ -97,5 +94,14 @@ const styles = StyleSheet.create({
   viewFlat: {
     maxHeight: 410,
     borderColor: 'red'
-  }
+  },
+  btnHome:{
+    margin: 10,
+    borderWidth: 3,
+    borderColor: '#0000FF',
+    width:150,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
 });

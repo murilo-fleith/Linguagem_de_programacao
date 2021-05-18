@@ -27,7 +27,9 @@ class HomeScreen extends React.Component {
         title = "Cadastrar"
         onPress={() => this.props.navigation.navigate('Cadastro')}
         />
+
         </TouchableOpacity>
+       
         <TouchableOpacity style={styles.deletar}>
         <Button
         justifyContent= 'center'

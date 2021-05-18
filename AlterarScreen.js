@@ -50,11 +50,14 @@ export default function Index({ navigation }) {
             <Text style={styles.text}> Quantidade: {item.quantidade}</Text>
 
             <TouchableOpacity style={styles.btnEnviar} onPress={() => { editFire(item.key, item.produto, item.quantidade) }}>
-              <Text style={styles.text}>Edit</Text>
+              <Text style={styles.text}>Editar</Text>
             </TouchableOpacity>
           </View>
-
         } />
+      <TouchableOpacity style={styles.btnHome} onPress={() => navigation.navigate("Home")}>
+        <Text style={styles.textHome}>Home</Text>
+      </TouchableOpacity>
+        
     </View>
   );
 }
@@ -69,6 +72,9 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
   },
+  textHome:{
+    color: '#0000FF'
+  },
   textInput: {
     width: 300,
     height: 50,
@@ -77,20 +83,20 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 5
   },
-  btnEnviar: {
+  btnHome:{
     margin: 10,
-    borderWidth: 1,
-    borderColor: 'red',
-    width: 150,
+    borderWidth: 3,
+    borderColor: '#0000FF',
+    width:150,
     height: 50,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   iconFlat: {
     flexDirection: 'row',
     width: 350,
     height: 50,
-    borderColor: '#fff',
+    borderColor: "#FA5700",
     borderWidth: 1,
     borderRadius: 5,
     alignItems: 'center',
@@ -99,7 +105,7 @@ const styles = StyleSheet.create({
   },
   btnEnviar: {
     borderWidth: 1,
-    borderColor: 'red',
+    borderColor: "#FA5700",
     width: 50,
     height: 20,
     alignItems: 'center',

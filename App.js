@@ -1,8 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator, HeaderBackground, HeaderTitle } from '@react-navigation/stack';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import HomeScreen from './HomeScreen'
 import CadastroScreen from './CadastroScreen'

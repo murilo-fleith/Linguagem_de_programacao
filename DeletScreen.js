@@ -59,11 +59,14 @@ export default function Index({ navigation }) {
             <Text style={styles.text}> quantidade: {item.quantidade}</Text>
 
             <TouchableOpacity style={styles.btnEnviar} onPress={() => { delFire(item.key) }}>
-              <Text style={styles.text}>Delete</Text>
+              <Text style={styles.textRemover}>Remover</Text>
             </TouchableOpacity>
+        
           </View>
-
-        } />
+      } />
+      <TouchableOpacity style={styles.btnHome} onPress={() => navigation.navigate("Home")}>
+        <Text style={styles.textHome}>Home</Text>
+      </TouchableOpacity>
      </View>
   );
 }
@@ -78,6 +81,12 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
   },
+  textHome:{
+    color: '#0000FF'
+  },
+  textRemover:{
+    color:"#FF0000"
+  },
   textInput: {
     width: 300,
     height: 50,
@@ -90,7 +99,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderWidth: 1,
     borderColor: 'red',
-    width: 50,
+    width: 60,
     height: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -100,7 +109,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 350,
     height: 50,
-    borderColor: '#fff',
+    borderColor: '#FF0000',
     borderWidth: 1,
     borderRadius: 5,
     alignItems: 'center',
@@ -109,5 +118,14 @@ const styles = StyleSheet.create({
   },
   viewFlat: {
     maxHeight: 410,
-  }
+  },
+  btnHome:{
+    margin: 10,
+    borderWidth: 3,
+    borderColor: '#0000FF',
+    width:150,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
 });
