@@ -13,7 +13,7 @@ class HomeScreen extends React.Component {
         justifyContent= 'center'
         alignItems= 'center'
         color ="#FA5700"
-        title = "Alterar"
+        title = "Alterar!"
         onPress={() => this.props.navigation.navigate('Alterar')}
         />
         </TouchableOpacity>
@@ -24,7 +24,7 @@ class HomeScreen extends React.Component {
         alignItems = 'center'
         color= "#00FF00"
         borderRadius= '20' 
-        title = "Cadastrar"
+        title = "Cadastrar!"
         onPress={() => this.props.navigation.navigate('Cadastro')}
         />
 
@@ -35,7 +35,7 @@ class HomeScreen extends React.Component {
         justifyContent= 'center'
         alignItems= 'center'
         color= "#FF0000" 
-        title = "Deletar"
+        title = "Deletar!"
         onPress={() => this.props.navigation.navigate('Delete')}
         />
         
@@ -46,7 +46,7 @@ class HomeScreen extends React.Component {
         justifyContent= 'center'
         alignItems= 'center'
         color= "#2935B9" 
-        title = "Pesquisar"
+        title = "Pesquisar!"
         onPress={() => this.props.navigation.navigate('Pesquisa')}
 
         />
