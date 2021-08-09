@@ -13,7 +13,7 @@ class HomeScreen extends React.Component {
         justifyContent= 'center'
         alignItems= 'center'
         color ="#FA5700"
-        title = "Alterar"
+        title = "ALTERAR"
         onPress={() => this.props.navigation.navigate('Alterar')}
         />
         </TouchableOpacity>
